@@ -7,7 +7,7 @@ This repo is a starting point for creating:
 
 Skip down to [deploy To Opensea](#deploy-to-opensea) - to see how to add a tokenURI
 
-We will easily create our own NFT on the Rinkeby Chain. We can edit the name of the character in the [`generate-character.js`](./scripts/generate-character.js) script. 
+We will easily create our own NFT on the Kovan Chain. We can edit the name of the character in the [`generate-character.js`](./scripts/generate-character.js) script. 
 
 This will create a character with 6 attributes from 0 - 99:
  -   uint256 strength;
@@ -23,16 +23,16 @@ And then:
 
 ## Quickstart
 
-Right now this repo only works with rinkeby. Run the following.
+Right now this repo only works with kovan. Run the following.
 
 ### Setup Environment Variables
-You'll need a `MNEMONIC` and a rinkeby `RINKEBY_RPC_URL` environment variable. Your `MNEMONIC` is your seed phrase of your wallet. You can find an `RINKEBY_RPC_URL` from node provider services like [Infura](https://infura.io/)
+You'll need a `MNEMONIC` and a kovan `KOVAN_RPC_URL` environment variable. Your `MNEMONIC` is your seed phrase of your wallet. You can find an `KOVAN_RPC_URL` from node provider services like [Infura](https://infura.io/)
 
 Then, you can create a `.env` file with the following.
 
 ```bash
 MNEMONIC='cat dog frog....'
-RINKEBY_RPC_URL='www.infura.io/asdfadsfafdadf'
+KOVAN_RPC_URL='www.infura.io/asdfadsfafdadf'
 ```
 
 Or, set them in a `bash_profile` file or export them directly into your terminal. You can learn more about [environment variables here](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html). 
@@ -40,7 +40,7 @@ Or, set them in a `bash_profile` file or export them directly into your terminal
 To run them directly in your terminal, run: 
 ```bash
 export MNEMONIC='cat dog frog....'
-export RINKEBY_RPC_URL='www.infura.io/asdfadsfafdadf'
+export KOVAN_RPC_URL='www.infura.io/asdfadsfafdadf'
 ```
 
 Then you can get started with:
@@ -50,7 +50,7 @@ Then you can get started with:
 git clone https://github.com/PatrickAlphaC/dungeons-and-dragons-nft
 cd dungeons-and-dragons-nft
 yarn
-truffle migrate --reset --network rinkeby
+truffle migrate --reset --network kovan
 ```
 
 This will deploy your D&D NFT!
@@ -58,9 +58,9 @@ This will deploy your D&D NFT!
 ### Generate a character
 You can now try it out:
 ```bash
-truffle exec scripts/fund-contract.js --network rinkeby
-truffle exec scripts/generate-character.js --network rinkeby
-truffle exec scripts/get-character.js --network rinkeby
+truffle exec scripts/fund-contract.js --network kovan
+truffle exec scripts/generate-character.js --network kovan
+truffle exec scripts/get-character.js --network kovan
 ```
 
 This will create a new character with random stats! 
@@ -74,7 +74,7 @@ You can get an [Etherscan API key](https://etherscan.io/apis) for free and inter
 
 ```bash
 yarn add truffle-plugin-verify
-truffle run verify DungeonsAndDragonsCharacter --network rinkeby --license MIT
+truffle run verify DungeonsAndDragonsCharacter --network kovan --license MIT
 ```
 
 This will verify and publish your contract, and you can go to the `Read Contract` section of etherscan that it gives you. 
@@ -119,7 +119,7 @@ This metadata json file is going to be our `tokenURI`, so we will modify our `se
 Then we just run it like:
 
 ```
-truffle exec scripts/set-token-uri.js --network rinkeby
+truffle exec scripts/set-token-uri.js --network kovan
 ```
 
 Now, we can get the address of our NFT and head on over to the opensea testnet marketplace to see if we did it correctly. If done correctly, it'll look [something like this](https://testnets.opensea.io/assets/dungeonsanddragonscharacter-v9).

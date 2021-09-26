@@ -15,9 +15,9 @@ contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
     uint256 internal fee;
     uint256 public randomResult;
     address public VRFCoordinator;
-    // rinkeby: 0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B
+    // kovan: 0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B
     address public LinkToken;
-    // rinkeby: 0x01BE23585060835E02B77ef475b0Cc51aA1e0709a
+    // kovan: 0x01BE23585060835E02B77ef475b0Cc51aA1e0709a
 
     struct Character {
         uint256 strength;
@@ -39,7 +39,7 @@ contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
     /**
      * Constructor inherits VRFConsumerBase
      *
-     * Network: Rinkeby
+     * Network: Kovan
      * Chainlink VRF Coordinator address: 0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B
      * LINK token address:                0x01BE23585060835E02B77ef475b0Cc51aA1e0709
      * Key Hash: 0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311

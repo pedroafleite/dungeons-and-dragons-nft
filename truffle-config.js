@@ -3,9 +3,9 @@ require('dotenv').config()
 
 module.exports = {
   networks: {
-    rinkeby: {
+    kovan: {
       provider: () => {
-        return new HDWalletProvider(process.env.MNEMONIC, process.env.RINKEBY_RPC_URL)
+        return new HDWalletProvider(process.env.MNEMONIC, process.env.KOVAN_RPC_URL)
       },
       network_id: '4',
       skipDryRun: true,
