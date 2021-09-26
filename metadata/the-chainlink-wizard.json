@@ -5,27 +5,27 @@
     "attributes": [
         {
             "trait_type": "Strength",
-            "value": 90
+            "value": 9
         },
         {
             "trait_type": "Dexterity",
-            "value": 74
+            "value": 26
         },
         {
             "trait_type": "Constitution",
-            "value": 96
+            "value": 68
         },
         {
             "trait_type": "Intelligence",
-            "value": 90
+            "value": 37
         },
         {
             "trait_type": "Wisdom",
-            "value": 2
+            "value": 0
         },
         {
             "trait_type": "Charisma",
-            "value": 96
+            "value": 19
         },
         {
             "trait_type": "Experience",

@@ -7,7 +7,7 @@ module.exports = {
       provider: () => {
         return new HDWalletProvider(process.env.MNEMONIC, process.env.KOVAN_RPC_URL)
       },
-      network_id: '4',
+      network_id: '42',
       skipDryRun: true,
     },
     mainnet: {
